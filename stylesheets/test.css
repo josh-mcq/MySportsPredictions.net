@@ -1,0 +1,132 @@
+
+/* h1
+xx prediction - this is for the prediction to make div
+xx game_title - this(poorly named) is for the date and time of the game
+xx winning - this is a class for a hidden input that is dynamically assigned a value = to the winning team key
+xx away - this is a class assigned to the away team button
+xx score - this is assigned to the score input
+xx home - this is a class assigned to the home team button
+xx winner - this is a state class that is dynamically assigned to the winning button w/ js.
+xx loser -  this is a state class that is dynamically assigned to the losing button w/ js.
+
+pending predictions section*
+h1
+div-pending - a div element that wraps around each individual pending prediction
+pending - this is a single p element for all three elements of pending predictions- Game, Winner, and Margin.
+
+**previous predictions section
+div-previous
+prev_date - this is a p that is a date in Ymd format.
+p.team  this is in dallas mavericks at minnesota timberwolves format
+p.pts_earned
+
+
+h1
+table.leader_table
+th  the header for players scores table
+tr- 
+td- name, then score
+*/
+
+h1 {
+
+}
+table {
+border: 3px solid #333;
+}
+/* FOR THE NEW PREDICTIONS SECTION
+/* for the div surrounding each prediction button, margin and date within the single prediction form */
+.prediction {
+
+
+}
+
+/* for the date and time showing above the game */
+.prediction_date-time {
+/*already defined in custom.css */
+}
+
+/* assigned to the margin input */
+.margin {
+
+}
+
+/* assigned to the home team button  */
+.prediction_home {
+
+}
+
+ /* this is a state class that is dynamically assigned to the winning button w/ js. */
+ .is-winner {
+ 
+ }
+ 
+/* This is a state class that is dynamically assigned to the losing button w/ js. */
+.is-loser {
+
+}
+
+/*  **PENDING PREDICTIONS SECTION**   */
+
+/*  a div element that wraps around each individual pending prediction  */
+.pending
+{}
+.pending_thead th {
+background-color: #000000;
+color: #ffffff;
+}
+
+.pending_table {
+width: 315px;
+}
+
+.pending_margin td {
+background-color: #3ba3d0;
+text-align: center;
+}
+/*    **PREVIOUS PREDICTIONS SECTION**  
+
+.div-previous
+prev_date - this is a p that is a date in Ymd format.
+p.team  this is in dallas mavericks at minnesota timberwolves format
+p.pts_earned
+ */
+table.previous_table {
+width:315px;
+}
+ 
+tr.previous_prediction td{
+color: #ffffff;
+background-color: #454545;
+} 
+
+.previous_thead, .previous_thead th{
+background-color: #333333;
+color:#ffffff;
+}
+
+.previous_result {
+background-color: #ff8700;
+color: #ffffff;
+
+}
+h3.login_h3 {
+color:#fff;
+margin-left:auto;
+margin-right:auto;
+}
+.login_fieldset {
+background-color:#2ba6cb;
+color:#fff;
+padding-bottom: 20px;
+
+width:35%;
+margin-left:auto;
+margin-right:auto;
+}
+.login_fieldset label {
+color: #fff;
+font-weight: bold;
+}
+
+

@@ -1,0 +1,132 @@
+h1#site-title a {
+color: #e4ce95;
+}
+.prediction_descr {
+height: 200px;
+background-color:#0772a1;
+}
+.prediction_descr h1 {
+color:#d3d3d3;            /*#2ba6cb;*/
+margin-left:20px;
+}
+.prediction_descr p {
+color:#63afd0;
+margin-left:20px;
+font-size: 14px;
+font-family: helvetica, sans-serif;
+max-width: 400px;
+}
+fieldset.prediction {
+background-color: #0772a1;  /* 2nd lightest */
+padding-bottom: 5px;
+width: 315px;
+}
+fieldset.prediction button {
+width: 160px
+}
+p.prediction_date-time {
+padding-left: 5px;
+background-color: #225e79; /* 2nd darkest */
+color: #ffffff;
+font-weight: 900;
+}
+
+article#panel-1 {
+background-color: #024a69;  /* lightest */
+padding:0;
+}
+
+form.prediction_form {
+background-color: #024a69;  /* lightest */
+padding:20px;
+
+}
+input.margin {
+background-color: #225e79;   /*2nd darkest*/
+margin-left:3px;
+border: 0;
+border-top: 2px solid #02468;  /*darkest*/
+color: #ffffff;
+}
+.prediction {
+
+border:1px solid black;
+margin-bottom: 5px;
+}
+
+.prediction_date-time {
+
+}
+.is-winner {
+background-color: #00b84a; /*#ffc02b*/
+color:#ffffff;
+
+}
+.is-loser {
+background-color:#63afd0;
+color:#ffffff;
+
+}
+article#panel-2 {
+background-color: #454545;
+}
+.pending_p {
+border:1px solid black;
+background-color:#2ba6cb;
+}
+.pending_h1 {
+color: #ffffff;
+}
+button.away, button.prediction_home {
+height: 42px;
+}
+input[type=number]::-webkit-inner-spin-button,
+			input[type=number]::-webkit-outer-spin-button 
+			{
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			
+article#panel-3 {
+background-color: #63afd0;
+}
+#header {
+border-bottom: 2px solid black;
+background-color: #0772a1;
+
+}
+.nav-bar li {
+background-color: #4d4d4d;
+}
+#nav {
+margin-top: 0;
+}	
+#site-title {
+margin-top:40px;
+}
+h1 {
+font-size: 32px;
+}		
+dd {
+background-color: #ffffff;
+}
+dd.active a {
+color: #000000;
+}
+.logout_btn {
+color: #e6e6e6;
+background-color:#333333;
+border: none;
+font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+font-size: 14px;}
+#logout_form {
+border:none;
+background-color:#333333;
+
+}
+.flyout {
+width: 97px;
+}
+.has-flyout {
+text-align:center;
+}

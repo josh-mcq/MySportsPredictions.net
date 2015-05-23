@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>My Sports Predictions</title>
+
+	<!-- Included CSS Files -->
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/offcanvas.css">
+  <link rel="stylesheet" href="stylesheets/custom.css">
+ 
+  <script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+
+  <body id="page" class="off-canvas paneled">
+	<div class="container">
+
+		<header id="header" class="row">
+		  <div class="four columns">
+		    <h1 id="site-title"><a href="http://zurb.com/playground/">My Sports Predictions.net</a></h1>
+		  </div>
+		  <div class="eight columns">
+		    <nav id="menu" role="navigation" class="hide-for-small">
+  				<ul id="nav" class="nav-bar">
+  					<li><a href="#panel-1" class="main nav-item">New</a></li>
+  					<li><a href="#panel-2" class="main nav-item">Pending</a></li>
+  					<li><a href="#panel-3" class="main nav-item">Previous</a></li>
+  					<li><a href="#panel-4" class="main nav-item">Week</a></li>
+  					<li><a href="#panel-5" class="main nav-item">Always</a></li> 
+  				</ul>
+  			</nav>
+
+  			<dl class="tabs five-up show-for-small" id="switchPanels">
+          <dd class="active"><a href="#panel-1">New</a></dd>
+          <dd><a href="#panel-2">Pending</a></dd>
+          <dd><a href="#panel-3">Previous</a></dd>
+          <dd><a href="#panel-4">Week</a></dd>
+          <dd><a href="#panel-5">Always</a></dd> 
+  			</dl>
+		  </div>
+		</header>
+
+		<div class="row">
+  		<section role="main" id="main">
+  		  <article id="panel-1" class="page-panel">
+			<h1>Make New Predictions</h1>
+			   <div class = "prediction">
+			   <p class = "game_title">Dec 23rd 7pm</p>
+			   <a href="#" id="home1" name="button1" class="incbut winner">Blazers</a>
+               <input type="number" id="score1" value="0">
+               <a href="#" id="away1" name="button2" class="incbut loser">Celtics</a>
+               </div>   
+
+			
+			  <div class = "prediction">
+			    
+              </div>
+			  
+			  
+			  
+			  <div class = "prediction">
+			    <p class = "game_title">Dec 23rd 7pm</p>
+			    <p>Los Angeles Lakers</p>
+			    <span>12</span> 
+				<p>New Orleans Pelicans</p>
+              </div>
+			  <div class = "prediction">
+			    <p class = "game_title">Dec 23rd 8pm</p>
+			    <p><a href="#">+</a> Portland Trailblazers</p>
+			    <p><a href="#">+</a> Houston Rockets</p>
+           	  </div>
+			  <div class = "prediction">
+			    <p class = "game_title">Dec 23rd 9pm</p>
+			    <p><a href="#">+</a> San Antonio Spurs</p>
+			    <p><a href="#">+</a> Golden State Warriors</p>
+              </div>
+			  </article><!-- /#panel-1 -->
+
+
+  			<article id="panel-2" class="page-panel">
+  				<h1>Pending Predictions</h1>
+  				<p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+  		  </article><!-- /#panel-2 -->
+
+
+			  <article id="panel-3" class="page-panel">
+				  <h1>Previous Predictions</h1>
+				  <p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+				  <p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+				  <p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+				</article><!-- /#panel-3 -->
+
+
+			  <article id="panel-4" class="page-panel">
+				  <h1>This Week Leaders</h1>
+				  <p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+				</article><!-- /#panel-4 -->
+
+
+			  <article id="panel-5" class="page-panel">
+				  <h1>All Time Leaders</h1>
+				  <p>Quisque lacinia est a libero tempor quis gravida nibh luctus. Nulla facilisi. Vestibulum bibendum ipsum a lacus molestie pulvinar a nec risus. Nulla facilisi. Aenean nec tellus ligula. Ut tortor mi, consequat in ornare in, condimentum sed leo. Phasellus et luctus ipsum. Mauris gravida molestie velit ac iaculis. Integer quis libero id erat consectetur accumsan ut eget diam. In hac habitasse platea dictumst.</p>
+				</article><!-- /#panel-5 -->
+
+		  </section>
+		</div>
+
+    <footer class="site-footer row" role="contentinfo">
+      <div class="twelve columns">
+        Created by ZURB for Foundation 3, based on code from Jason Weaver and Luke Wroblewski
+      </div>
+    </footer>
+  </div>
+
+
+	<!-- Included JS Files -->
+  <script src="javascripts/foundation/jquery.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+  <script src="javascripts/foundation/jquery.placeholder.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/foundation/jquery.offcanvas.js"></script>
+  <script src="javascripts/foundation/app.js"></script>
+  <script src="testscript.js"></script>
+
+
+</body>
