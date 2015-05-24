@@ -6,7 +6,7 @@
 	$nthdate = date('Ymd')+$n;
 	return $nthdate;
 	}
-    $ACCESS_TOKEN = "0b054483-d4f6-477e-a186-615842e91010";
+    $ACCESS_TOKEN = "a28c6655-f9a1-487d-8f61-ab5fd1519978";
 	//$game_date = date();
 	$url = "https://erikberg.com/events.json?date=" . getNthDay(0) . "&sport=nba";
     $ch = curl_init(); 
