@@ -98,7 +98,7 @@ if(isset($_SESSION['email']))
 	 $pred_keys[$pr_array['value']['game']] = $pr_array['value'];
    }
    
-	include 'newhome.html.php';
+	include 'home.html.php';
 	//include 'echo2.php';
   
   }
