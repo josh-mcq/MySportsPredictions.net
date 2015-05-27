@@ -1,5 +1,12 @@
 # MySportsPredictions.net
 
+**Bug Alert!!**
+05/26/2015 - A bug somewhere is preventing predictions from being saved currently, I am currently working to debug the application, and suspect it has to do with changes to one of the API's used in this application.
+
+**Disclaimer**
+This application was my first major project building a dynamic application, and I was guided mostly by late nights, intuition, coffee(no sugar please), and books, tutorials, and stack overflow.  While it does not live up to the quality coding standards I'd like to think I try to adhere now, it was at one point a functional application, that shows, if nothing else, that with persistence you can achieve a lot.  That said, read the following code at your own risk.
+
+
 **Functional Overview of this application**
 
 - Users may sign up with a username and email address, or by clicking on "guest" you may see functionality and use it as 'guest user' 

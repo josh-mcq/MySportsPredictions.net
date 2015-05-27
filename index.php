@@ -8,9 +8,9 @@ function __autoload($classname)
 if(isset($_SESSION['email']))
 { 
   if(!empty($_POST['prediction']))
-  {
-    array_pop($_POST);
-    $predictions = Match::flipdiagonally($_POST);
+  
+  {  include 'echo.php'; 
+   ''' $predictions = Match::flipdiagonally($_POST);
     foreach($predictions as $prediction) 
     {
       if($prediction['winner']!='NULL')
@@ -20,7 +20,7 @@ if(isset($_SESSION['email']))
 	    $prediction_object->storeMatchPredictionRel();
 	  }
     }
-	header("Location: http://www.mysportspredictions.net/");
+	header("Location: http://www.mysportspredictions.net/");'''
   }
   elseif(isset($_POST['logout']))
   {
