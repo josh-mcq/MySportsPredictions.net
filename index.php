@@ -9,9 +9,11 @@ if(isset($_SESSION['email']))
 { 
   if(!empty($_POST['prediction']))
   
-  {  include 'echo.php'; 
-   ''' $predictions = Match::flipdiagonally($_POST);
+  {  
+   include 'echo.php'; 
+   $predictions = Match::flipdiagonally($_POST);
     foreach($predictions as $prediction) 
+    
     {
       if($prediction['winner']!='NULL')
 	  {
@@ -20,7 +22,7 @@ if(isset($_SESSION['email']))
 	    $prediction_object->storeMatchPredictionRel();
 	  }
     }
-	header("Location: http://www.mysportspredictions.net/");'''
+	header("Location: http://www.mysportspredictions.net/");
   }
   elseif(isset($_POST['logout']))
   {
@@ -99,7 +101,7 @@ if(isset($_SESSION['email']))
    }
    
 	include 'home.html.php';
-	//include 'echo2.php';
+	//include 'test.php';
   
   }
 } 

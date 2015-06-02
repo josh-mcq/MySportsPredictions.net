@@ -82,7 +82,7 @@
 </form>
 
 <!-- ***FORM TO DELETE MATCHES*** -->
-<!--<form action = "?" method = "post">
+<form action = "?" method = "post">
 
   <?php foreach($arrays as $array) {?>
   <input type="checkbox" name="deleted_match[]" value="<?php echo $array['path']['key'];?>"><?php echo $array['path']['key'];?><br />
@@ -103,7 +103,7 @@
    
 <!-- ***FORM TO MANUALLY INPUT FINAL SCORES *** -->
 
-<!--<form action = "?" method = "post">
+<form action = "?" method = "post">
   <?php foreach($arrays as $arrayb) { ?>
 
    <?php echo $arrayb['path']['key']; ?>
@@ -121,7 +121,7 @@
   <?php } ?>
   
   <input type = "submit" name = "final_scores">
-</form>-->
+</form>
 
 <!-- ***FORM TO AUTO ADD MATCHES VIA XMLSTATS API*** -->
 <form action = "?" method = "post">

@@ -61,24 +61,18 @@ elseif($_POST['final_scores'])
 { 
   array_pop($_POST); //to get rid of submit button input...
   $matches = Match::flipdiagonally($_POST);
-  foreach($matches as $match) 
-  {
-    if($match["home_score"]=="Pick Score")
-	{
-	  $match["home_score"]="NULL";
-	}
-	if($match["away_score"]=="Pick Score")
-	{
-	  $match["away_score"]="NULL";
-	}
-    $str = $match["key"];
-    $var = explode("_",$str);
-	$match["game_date"] = $var[2];
-	$match["home_key"] = "the_" . $var[0];
-	$match["away_key"] = "the_" . $var[1];
-    $match_object = new Match($match["game_date"],$match["home_key"],$match["away_key"],$match["home_score"],$match["away_score"]);
-    $match_object->storeMatch(); 
-	Prediction::awardPoints($match_object);
+  foreach($matches as $match) {
+  $str = $match["key"];
+    $matcharray = explode("-at-",$str);
+    $match["game_date"] = explode("-", $str)[0];
+    $match["home_key"] = array_pop($matcharray);
+    $match["away_key"] = join("-", array_slice(explode("-", $matcharray[0]), 1));
+    if($match["home_score"] != "Pick Score")
+      {
+        $match_object = new Match($match["game_date"],$match["home_key"],$match["away_key"],$match["home_score"],$match["away_score"]);
+        $match_object->storeMatch(); 
+        Prediction::awardPoints($match_object);
+      }
   }
 } 
 

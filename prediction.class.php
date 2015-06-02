@@ -3,8 +3,7 @@
  <?php
 
 /**
- * The Prediction class will be instantiated when we need to make a prediction.
-   METHODS:
+   * The Prediction class will be instantiated when we need to make a prediction.
    *public function __construct($_game, $_winner, $_margin, $_email)
    *public static function getSport(){
    *public static function getGames()
@@ -15,8 +14,7 @@
    *public static function awardPoints($match_object)
    *public static function getRightPredictions($match)
    *public static function autoScoreMatches()
-
- */
+ **/
  
 class Prediction
 {
@@ -76,12 +74,12 @@ class Prediction
   public static function getUrlForUnsweredPredictions() 
   {
     $email = $_SESSION['email'];
-     $yesterday = '"' . $email . "|" . date('Ymd', mktime(0,0,0,date("m"),date("d")-1,date("Y"))) . '"';
-    $today = '"' . $email . "|" . date('Ymd') . '"';
-    $tomorrow = '"' . $email . "|" . date('Ymd', mktime(0,0,0,date("m"),date("d")+1,date("Y"))) . '"';
-    $in_two_days = '"' . $email . "|" . date('Ymd', mktime(0,0,0,date("m"),date("d")+2,date("Y"))) . '"';
-
-	$query = $yesterday . " OR " . $today . " OR " . $tomorrow . " OR " . $in_two_days;
+    $yesterday = date('Ymd', mktime(0,0,0,date("m"),date("d")-1,date("Y")));
+    $today = date('Ymd');
+    $tomorrow = date('Ymd', mktime(0,0,0,date("m"),date("d")+1,date("Y")));
+    $in_two_days = date('Ymd', mktime(0,0,0,date("m"),date("d")+2,date("Y")));
+    $query = $email . " AND " . "(" .$yesterday . " OR " . $today . " OR " . $tomorrow . " OR " . $in_two_days . ")";
+    
     
   return $query;
   }
@@ -92,15 +90,15 @@ class Prediction
     $key = $this->email . '|' . $this->game;
     $url = "https://api.orchestrate.io/v0/predictions/" . urlencode($key);//change
     $ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, $url); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	  curl_setopt($ch, CURLOPT_URL, $url); 
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
     curl_setopt($ch, CURLOPT_POSTFIELDS,($data));
-	curl_setopt($ch, CURLOPT_USERPWD, API_KEY);
+	  curl_setopt($ch, CURLOPT_USERPWD, API_KEY);
   	curl_setopt($ch, CURLOPT_HTTPHEADER, 
-	array('Content-Type: application/json','Accept-Language:application/json')); 
-	$output = curl_exec($ch);
-	curl_close($ch);
+	  array('Content-Type: application/json','Accept-Language:application/json')); 
+  	$output = curl_exec($ch);
+	  curl_close($ch);
   }
 	
   public function storeMatchPredictionRel()
@@ -141,7 +139,7 @@ class Prediction
   { 
     if($match_object->home_score !="NULL")
 	{
-      $game_predictions = Prediction::getRightPredictions($match_object);
+    $game_predictions = Prediction::getRightPredictions($match_object);
 	  $array = json_decode($game_predictions, 1);
 	  $predictions = $array['results']; 
 	  foreach($predictions as $prediction)
@@ -168,7 +166,7 @@ class Prediction
 	    }
         $game_key = $prediction['value']['game'];	
         $user_key = $prediction['value']['email'];	
-		$stamp = $match_object->timestamp;
+		    $stamp = $match_object->timestamp;
   	    User::createEvent($score, $game_key, $user_key, $stamp);
 	  } 
 	}
@@ -177,19 +175,20 @@ class Prediction
       
     }	
   }
+  
   public static function getRightPredictions($match)
   {
     $game_key = $match->getKey();  
-	$url = "https://api.orchestrate.io/v0/matches/$game_key/relations/prediction";
+	  $url = "https://api.orchestrate.io/v0/matches/$game_key/relations/prediction";
     $ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, $url); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_USERPWD, API_KEY);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, 
-	array('Content-Type: application/json','Accept-Language:application/json')); 
-	$output = curl_exec($ch);
-	curl_close($ch);
-	return $output;
+	  curl_setopt($ch, CURLOPT_URL, $url); 
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	  curl_setopt($ch, CURLOPT_USERPWD, API_KEY);
+	  curl_setopt($ch, CURLOPT_HTTPHEADER, 
+	  array('Content-Type: application/json','Accept-Language:application/json')); 
+	  $output = curl_exec($ch);
+	  curl_close($ch);
+	  return $output;
   }
   
   public static function getUnscoredMatches($days)

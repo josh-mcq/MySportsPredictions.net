@@ -86,7 +86,7 @@
 			   array_unique($sorted_arrays);
 			  foreach($sorted_arrays as $array_new)
 			   {
-			  // var_dump($array_new);
+			   //var_dump($array_new);
 			   //echo "<br/>hello<br/>hi<br/>";
 			     if(!in_array($array_new['path']['key'], $game_keys)) { 
 			     $home = str_replace("-", " ", $array_new['value']['home_key']);
