@@ -1,5 +1,6 @@
 <?php 
- 
-var_dump($match);
-  
+ //echo $hello;
+var_dump($arrays);
+
+  echo 'hey dog';
 ?>

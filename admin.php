@@ -61,15 +61,17 @@ elseif($_POST['final_scores'])
 { 
   array_pop($_POST); //to get rid of submit button input...
   $matches = Match::flipdiagonally($_POST);
+  $hello = 'hello';//stuff goes here
   foreach($matches as $match) {
-  $str = $match["key"];
+    $str = $match["key"];
     $matcharray = explode("-at-",$str);
     $match["game_date"] = explode("-", $str)[0];
     $match["home_key"] = array_pop($matcharray);
     $match["away_key"] = join("-", array_slice(explode("-", $matcharray[0]), 1));
+    
     if($match["home_score"] != "Pick Score")
       {
-        $match_object = new Match($match["game_date"],$match["home_key"],$match["away_key"],$match["home_score"],$match["away_score"]);
+        $match_object = new Match($match["game_date"],$match["home_key"],$match["away_key"],$match["home_score"],$match["away_score"], $match["timestamp"]);
         $match_object->storeMatch(); 
         Prediction::awardPoints($match_object);
       }
@@ -115,5 +117,6 @@ else
    $predArray = json_decode($predictionsJson, 1);
    $p_arrays = $predArray['results'];
    include 'match_entry.html.php';
+   //include 'echo.php';
    }
 ?>

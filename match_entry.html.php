@@ -118,6 +118,7 @@
       <?php $array = array(); $array[0] = "Pick Score";for($i=60; $i<=150; $i++){$array[] = $i;}?><?php foreach($array as $j) { //creating the option list?><option value = "<?php echo $j; ?>"><?php echo $j;} ?></option>
     </select><br/>
    <input type = "hidden" name="key[]" value="<?php echo $arrayb['path']['key']; ?>">
+    <input type = "hidden" name="timestamp[]" value="<?php echo $arrayb['value']['timestamp']; ?>">
   <?php } ?>
   
   <input type = "submit" name = "final_scores">
